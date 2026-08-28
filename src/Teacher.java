@@ -16,4 +16,11 @@ public abstract class Teacher {
     public double getBaseSalary() {
         return baseSalary;
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + '\'' +
+                ", Base salary: $" + baseSalary + '\'' +
+                ", Total salary: $" + calculateSalary();
+    }
 }

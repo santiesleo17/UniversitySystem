@@ -11,4 +11,11 @@ public class PartTimeTeacher extends Teacher{
     public double calculateSalary() {
         return getBaseSalary() * this.activeHoursPerWeek;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + '\'' +
+                ", Type: Part time" + '\'' +
+                ", Hours: " + activeHoursPerWeek;
+    }
 }

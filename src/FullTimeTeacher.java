@@ -11,4 +11,17 @@ public class FullTimeTeacher extends Teacher{
     public double calculateSalary() {
         return getBaseSalary() * (1.10 * this.experienceYears);
     }
+/**
+    public String toString() {
+        return "Name: " + name + '\'' +
+                ", Base salary: $" + baseSalary + '\'' +
+                ", Total salary: $" + calculateSalary();
+    }**/
+
+    @Override
+    public String toString() {
+        return super.toString() + '\'' +
+                ", Type: Full time" + '\'' +
+                ", Experience: " + experienceYears + "year(s)";
+    }
 }
