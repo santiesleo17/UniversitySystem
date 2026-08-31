@@ -1,4 +1,5 @@
 public class Student {
+    // Static counter to generate unique auto-incrementing IDs for all students
     private static int idCounter = 1;
     private String name;
     private int id;
@@ -10,15 +11,14 @@ public class Student {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String toString() {
+        return "Nombre: " + name +
+                ", id: " + id +
+                ", edad: " + age;
     }
 
-    public int getId() {
-        return id;
-    }
+    public String getName() { return name; }
 
-    public int getAge() {
-        return age;
-    }
+    public int getId() { return id; }
 }

@@ -1,5 +1,5 @@
 public class PartTimeTeacher extends Teacher{
-
+    //Part Time Teachers have active hours per week
     private double activeHoursPerWeek;
 
     public PartTimeTeacher(String name, double activeHoursPerWeek) {
@@ -15,7 +15,7 @@ public class PartTimeTeacher extends Teacher{
     @Override
     public String toString() {
         return super.toString() + '\'' +
-                ", Type: Part time" + '\'' +
-                ", Hours: " + activeHoursPerWeek;
+                ", Tipo: Tiempo parcial" + '\'' +
+                ", Horas: " + activeHoursPerWeek;
     }
 }

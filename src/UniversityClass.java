@@ -15,4 +15,20 @@ public class UniversityClass {
         this.students = students;
         this.teacher = teacher;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getClassroom() {
+        return classroom;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
 }

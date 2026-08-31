@@ -1,5 +1,5 @@
 public class FullTimeTeacher extends Teacher{
-
+    // Full time teachers have experience years
     private double experienceYears;
 
     public FullTimeTeacher(String name, double experienceYears) {
@@ -15,7 +15,7 @@ public class FullTimeTeacher extends Teacher{
     @Override
     public String toString() {
         return super.toString() + '\'' +
-                ", Type: Full time" + '\'' +
-                ", Experience: " + experienceYears + "year(s)";
+                ", Tipo: Tiempo completo" + '\'' +
+                ", Experiencia: " + experienceYears + "año(s)";
     }
 }
