@@ -1,3 +1,5 @@
+import model.*;
+
 import java.util.*;
 
 public class UniversityController {
@@ -109,7 +111,7 @@ public class UniversityController {
             return;
         }
 
-        //Create the student and add to the University
+        //Create the student and add to the model.University
         Student newStudent = new Student(name, age);
         icesi.addStudent(newStudent);
 
