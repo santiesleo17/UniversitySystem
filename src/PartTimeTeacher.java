@@ -2,14 +2,14 @@ public class PartTimeTeacher extends Teacher{
 
     private double activeHoursPerWeek;
 
-    public PartTimeTeacher(String name, double baseSalary, double activeHoursPerWeek) {
-        super(name, baseSalary);
+    public PartTimeTeacher(String name, double activeHoursPerWeek) {
+        super(name);
         this.activeHoursPerWeek = activeHoursPerWeek;
     }
 
     @Override
     public double calculateSalary() {
-        return getBaseSalary() * this.activeHoursPerWeek;
+        return getBASE_SALARY() * this.activeHoursPerWeek;
     }
 
     @Override

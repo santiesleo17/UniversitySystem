@@ -1,26 +1,21 @@
 public abstract class Teacher {
     private String name;
-    private double baseSalary;
+    private final double BASE_SALARY = 2000000;
 
-    public Teacher(String name, double baseSalary) {
+    public Teacher(String name) {
         this.name = name;
-        this.baseSalary = baseSalary;
     }
 
     public abstract double calculateSalary();
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
-    public double getBaseSalary() {
-        return baseSalary;
-    }
+    public double getBASE_SALARY() { return BASE_SALARY; }
 
     @Override
     public String toString() {
         return "Name: " + name + '\'' +
-                ", Base salary: $" + baseSalary + '\'' +
+                ", Base salary: $" + BASE_SALARY + '\'' +
                 ", Total salary: $" + calculateSalary();
     }
 }
