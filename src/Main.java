@@ -1,3 +1,7 @@
+import controller.IUniversityController;
+import controller.UniversityController;
+import model.University;
+
 import java.util.Scanner;
 
 public class Main {
@@ -5,7 +9,7 @@ public class Main {
 
         University university = new University();
 
-        UniversityController controller = new UniversityController(university);
+        IUniversityController controller = new UniversityController(university);
 
         controller.initData();
 

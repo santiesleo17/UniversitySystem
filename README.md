@@ -1,7 +1,7 @@
 
 ---
 
-# University Management System
+# model.University Management System
 
 A Java-based console application designed to manage university operations—including teachers, students, and classes—while demonstrating core Object-Oriented Programming (OOP) concepts.
 
@@ -9,11 +9,11 @@ A Java-based console application designed to manage university operations—incl
 
 ## Features
 
-* **Teacher Directory:** View all teachers (Full-Time and Part-Time) along with their calculated total salaries based on experience or active hours.
+* **model.Teacher Directory:** View all teachers (Full-Time and Part-Time) along with their calculated total salaries based on experience or active hours.
 * **Class Explorer:** Display registered university classes and inspect specific class details (classroom, assigned teacher, and enrolled student roster).
-* **Student Registration:** Register new students with auto-incrementing IDs and instantly enroll them into an existing class.
+* **model.Student Registration:** Register new students with auto-incrementing IDs and instantly enroll them into an existing class.
 * **Class Creation:** Create new classes, assign a teacher, and select existing students for enrollment.
-* **Student Class Lookup:** Search and list all classes associated with a specific student using their unique ID.
+* **model.Student Class Lookup:** Search and list all classes associated with a specific student using their unique ID.
 
 ---
 
@@ -32,13 +32,13 @@ A Java-based console application designed to manage university operations—incl
 ```
 src/
 ├── Main.java                 # Program entry point and menu loop
-├── UniversityController.java   # Handles business logic and user interaction
-├── University.java           # Data container for teachers, students, and classes
-├── UniversityClass.java      # Model representing a course/class
-├── Student.java              # Model representing a student
-├── Teacher.java              # Abstract base model for teachers
-├── FullTimeTeacher.java      # Concrete class for full-time faculty
-└── PartTimeTeacher.java      # Concrete class for part-time faculty
+├── controller.UniversityController.java   # Handles business logic and user interaction
+├── model.University.java           # Data container for teachers, students, and classes
+├── model.UniversityClass.java      # Model representing a course/class
+├── model.Student.java              # Model representing a student
+├── model.Teacher.java              # Abstract base model for teachers
+├── model.FullTimeTeacher.java      # Concrete class for full-time faculty
+└── model.PartTimeTeacher.java      # Concrete class for part-time faculty
 
 ```
 

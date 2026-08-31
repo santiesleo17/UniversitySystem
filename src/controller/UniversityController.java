@@ -1,8 +1,10 @@
+package controller;
+
 import model.*;
 
 import java.util.*;
 
-public class UniversityController {
+public class UniversityController implements IUniversityController {
     private final University icesi;
 
     public UniversityController(University icesi) {

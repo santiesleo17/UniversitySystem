@@ -1,3 +1,5 @@
+package model;
+
 public class PartTimeTeacher extends Teacher{
     //Part Time Teachers have active hours per week
     private double activeHoursPerWeek;

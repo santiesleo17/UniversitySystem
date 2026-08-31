@@ -1,3 +1,5 @@
+package model;
+
 import java.util.List;
 
 //  Each class has a name, an
