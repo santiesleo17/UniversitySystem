@@ -20,9 +20,9 @@ A Java-based console application designed to manage university operations—incl
 ## Object-Oriented Programming (OOP) Principles Applied
 
 * **Encapsulation:** Private attributes across all models (`Teacher`, `Student`, `UniversityClass`, `University`) accessed via public getters and setters.
-* **Abstraction:** The abstract class `Teacher` hides base implementation details while declaring the abstract method `calculateSalary()`.
+* **Abstraction:** The abstract class `Teacher` hides base implementation details while declaring the abstract method `calculateSalary()`. The `IUniversityController` interface abstracts controller logic from `Main`.
 * **Inheritance:** `FullTimeTeacher` and `PartTimeTeacher` extend `Teacher`, inheriting shared properties like `name` and `BASE_SALARY` while providing custom salary calculations.
-* **Polymorphism:** The system handles instances of `FullTimeTeacher` and `PartTimeTeacher` uniformly through the parent type `Teacher`.
+* **Polymorphism:** The system handles instances of `FullTimeTeacher` and `PartTimeTeacher` uniformly through the parent type `Teacher`. Additionally, `Main` references the controller via the `IUniversityController` interface type.
 * **Static Usage:** A `static` counter (`idCounter`) inside the `Student` class automatically generates unique, sequential student IDs across all instances.
 
 ---
@@ -31,28 +31,33 @@ A Java-based console application designed to manage university operations—incl
 
 ```
 src/
-├── Main.java                 # Program entry point and menu loop
-├── UniversityController.java   # Handles business logic and user interaction
-├── University.java           # Data container for teachers, students, and classes
-├── UniversityClass.java      # Model representing a course/class
-├── Student.java              # Model representing a student
-├── Teacher.java              # Abstract base model for teachers
-├── FullTimeTeacher.java      # Concrete class for full-time faculty
-└── PartTimeTeacher.java      # Concrete class for part-time faculty
+├── Main.java                             # Program entry point and menu loop
+├── controller/
+│   ├── IUniversityController.java        # Controller interface defining system actions
+│   └── UniversityController.java         # Controller implementation (business logic & UI prompts)
+└── model/
+    ├── University.java                   # Data container for teachers, students, and classes
+    ├── UniversityClass.java              # Model representing a course/class
+    ├── Student.java                      # Model representing a student
+    ├── Teacher.java                      # Abstract base model for teachers
+    ├── FullTimeTeacher.java              # Concrete class for full-time faculty
+    └── PartTimeTeacher.java              # Concrete class for part-time faculty
 
 ```
 
 ---
 
-## Data Models Summary
+## Data Models & Components Summary
 
-| Class | Type | Key Attributes | Specific Rules |
+| Class / Interface | Package | Type | Key Details / Specific Rules |
 | --- | --- | --- | --- |
-| `Teacher` | Abstract | `name`, `BASE_SALARY` | Base salary set to a fixed constant ($2,000,000). |
-| `FullTimeTeacher` | Subclass | `experienceYears` | **Salary:** $\text{BASE\_SALARY} \times (1.10 \times \text{experienceYears})$ |
-| `PartTimeTeacher` | Subclass | `activeHoursPerWeek` | **Salary:** $\text{BASE\_SALARY} \times \text{activeHoursPerWeek}$ |
-| `Student` | Model | `id`, `name`, `age` | `id` is auto-incremented via a `static` counter. |
-| `UniversityClass` | Model | `name`, `classroom`, `students`, `teacher` | Contains a list of enrolled students and one assigned teacher. |
+| `IUniversityController` | `controller` | Interface | Contract defining all controller operations. |
+| `UniversityController` | `controller` | Class | Implements `IUniversityController`, manages business logic & Scanner prompts. |
+| `Teacher` | `model` | Abstract Class | Base model. Base salary set to a fixed constant ($2,000,000). |
+| `FullTimeTeacher` | `model` | Subclass | **Salary:** $\text{BASE\_SALARY} \times (1.10 \times \text{experienceYears})$ |
+| `PartTimeTeacher` | `model` | Subclass | **Salary:** $\text{BASE\_SALARY} \times \text{activeHoursPerWeek}$ |
+| `Student` | `model` | Class | `id` is auto-incremented via a `static` counter. |
+| `UniversityClass` | `model` | Class | Contains a list of enrolled students and one assigned teacher. |
 
 ---
 

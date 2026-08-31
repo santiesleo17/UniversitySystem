@@ -1,3 +1,5 @@
+package model;
+
 public class Student {
     // Static counter to generate unique auto-incrementing IDs for all students
     private static int idCounter = 1;

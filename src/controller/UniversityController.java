@@ -1,6 +1,10 @@
+package controller;
+
+import model.*;
+
 import java.util.*;
 
-public class UniversityController {
+public class UniversityController implements IUniversityController {
     private final University icesi;
 
     public UniversityController(University icesi) {
@@ -109,7 +113,7 @@ public class UniversityController {
             return;
         }
 
-        //Create the student and add to the University
+        //Create the student and add to the model.University
         Student newStudent = new Student(name, age);
         icesi.addStudent(newStudent);
 

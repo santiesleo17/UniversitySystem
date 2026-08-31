@@ -1,3 +1,5 @@
+package model;
+
 public class FullTimeTeacher extends Teacher{
     // Full time teachers have experience years
     private double experienceYears;
